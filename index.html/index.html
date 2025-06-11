@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Arquivos - FileConvertPro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    form {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 5px 0;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>FileConvertPro</h1>
+  <form action="/convert" method="post" enctype="multipart/form-data">
+    <label for="file">Selecione o arquivo:</label><br>
+    <input type="file" id="file" name="file" required accept=".csv,.xml,.txt,.json"><br><br>
+    
+    <label for="format">Formato de destino:</label><br>
+    <select id="format" name="format" required>
+      <option value="">Selecione...</option>
+      <option value="json">JSON</option>
+      <option value="csv">CSV</option>
+      <option value="xml">XML</option>
+    </select><br><br>
+    
+    <button type="submit">Converter</button>
+  </form>
+</body>
+</html>
