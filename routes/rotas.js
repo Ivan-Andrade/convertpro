@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const { convertFile } = require('../controllers/convertController');
+const { convertFile } = require('../controllers/Controllers.js');
 
 const router = express.Router();
 
